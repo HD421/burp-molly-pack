@@ -115,5 +115,6 @@ public class YaSSRFPlugin implements IAuditPlugin {
         SSRFPayloads.add(".{payloadUrl}");
         SSRFPayloads.add("@{payloadUrl}");
         SSRFPayloads.add(":@{payloadUrl}");
+        SSRFPayloads.add("[::{payloadUrl}]");
     }
 }
