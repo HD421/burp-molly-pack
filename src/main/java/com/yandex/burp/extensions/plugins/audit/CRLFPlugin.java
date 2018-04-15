@@ -199,6 +199,15 @@ public class CRLFPlugin implements IAuditPlugin {
         CRLFSplitters.add("%E5%98%8A%E5%98%8D%E5%98%8A%E5%98%8D");
 
         CRLFSplitters.add("%c4%8d%c4%8a"); // https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2216
+        CRLFSplitters.add("%23%0d");
+        CRLFSplitters.add("%3f%0d");
+        CRLFSplitters.add("%25250a");
+        CRLFSplitters.add("%%0a0a");
+        CRLFSplitters.add("%3f%0d");
+        CRLFSplitters.add("%25%30a");
+        CRLFSplitters.add("%25%30%61");
+        CRLFSplitters.add("%u000a");
+        CRLFSplitters.add("%E5%98%8A%E5%98%8D");
 
     }
 }

