@@ -190,10 +190,19 @@ public class CRLFPlugin implements IAuditPlugin {
 
         CRLFSplitters.add("%0d");
         CRLFSplitters.add("%0a");
+        CRLFSplitters.add("%250a");
+        CRLFSplitters.add("%25250a");
         CRLFSplitters.add("%0d%0a");
+        CRLFSplitters.add("%3f%0d%0a");
+        CRLFSplitters.add("%20%0d%0a");
+        CRLFSplitters.add("%23%0d%0a");
         CRLFSplitters.add("%0d%0a%09");
         CRLFSplitters.add("%0d+");
         CRLFSplitters.add("%0d%20");
+        CRLFSplitters.add("%0a%20");
+        CRLFSplitters.add("%20%0a");
+        CRLFSplitters.add("%20%0d");
+        CRLFSplitters.add("%23%0a");
         CRLFSplitters.add("%0d%0a+");
         CRLFSplitters.add("%E5%98%8A%E5%98%8D");
         CRLFSplitters.add("%E5%98%8A%E5%98%8D%E5%98%8A%E5%98%8D");
@@ -203,11 +212,16 @@ public class CRLFPlugin implements IAuditPlugin {
         CRLFSplitters.add("%3f%0d");
         CRLFSplitters.add("%25250a");
         CRLFSplitters.add("%%0a0a");
-        CRLFSplitters.add("%3f%0d");
+        CRLFSplitters.add("%3f%0a");
         CRLFSplitters.add("%25%30a");
         CRLFSplitters.add("%25%30%61");
         CRLFSplitters.add("%u000a");
-        CRLFSplitters.add("%E5%98%8A%E5%98%8D");
+        CRLFSplitters.add("%E5%98%8A%E5%98%8D%0A");
+        CRLFSplitters.add("%E5%98%8A%E5%98%8D%0D");
+        CRLFSplitters.add("%E5%98%8A%E5%98%8D%0D%0A");
+        CRLFSplitters.add("//www.testtesttest.com/%2F%2E%2E%0D%0A");
+        CRLFSplitters.add("/www.testtesttest.com/%2E%2E%2F%0D%0A");
+        CRLFSplitters.add("/testtesttest.com/%2F..%0D%0A");
 
     }
 }
