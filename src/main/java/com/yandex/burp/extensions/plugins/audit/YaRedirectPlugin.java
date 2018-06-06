@@ -30,7 +30,11 @@ public class YaRedirectPlugin implements IAuditPlugin {
             // Internet Explorer
             "/\t/EXAMPLE.COM", "\\\t\\EXAMPLE.COM",
             // Chrome
-            "///EXAMPLE.COM", "\\/\\EXAMPLE.COM", "/\\/EXAMPLE.COM");
+            "///EXAMPLE.COM", "\\/\\EXAMPLE.COM", "/\\/EXAMPLE.COM",
+            "/%5cEXAMPLE.COM", "/https://%5cEXAMPLE.COM", "/%2f%5c%2f%67%6f%6f%67%6c%65%2e%63%6f%6d/", "http://0xd8.0x3a.0xd6.0xce",
+            "http://XY>.7d8T\205pZM@0xd83ad6ce", "http://472.314.470.462", "http://[::216.58.214.206]", "http://3H6k7lIAiqjfNeN@[::216.58.214.206]",
+            "/ゝEXAMPLE.COM", "〵EXAMPLE.COM", "%68%74%74%70%3a%2f%2f%67%6f%6f%67%6c%65%2e%63%6f%6d", "\u006A\u0061\u0076\u0061\u0073\u0063\u0072\u0069\u0070\u0074\u003aalert(1)",
+            "\152\141\166\141\163\143\162\151\160\164\072alert(1)", "http://;@EXAMPLE.COM");
 
     public YaRedirectPlugin(IBurpExtenderCallbacks callbacks, BurpMollyPackConfig extConfig) {
 
